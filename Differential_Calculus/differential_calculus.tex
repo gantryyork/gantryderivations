@@ -1,0 +1,115 @@
+\section{Chain Rule}
+
+\section{Product Rule}
+The Product Rule is most commonly stated as
+\[(f(x)g(x))' = f'(x)g(x) + f(x)g'(x)\]
+or more formally as
+\[\frac{d}{dx}\bigg[f(x)g(x) \bigg] = \frac{df}{dx}g(x) + f(x)\frac{dg}{dx} \]
+
+\subsection{Derivation}
+Using
+\[\frac{df}{dx} = \lim_{h\to0}\frac{f(x+h) -f(x)}{h} \text{, the Formal Definition of the Derivative}\]
+\begin{align*}
+\frac{d}{dx}\bigg[f(x)g(x) \bigg] =& \lim_{h\to0}\frac{f(x+h)g(x+h) -f(x)g(x)}{h} \\
+=& \lim_{h\to0}\frac{f(x+h)g(x+h) + [f(x+h)g(x) - f(x+h)g(x)] - f(x)g(x)}{h} \\
+=& \lim_{h\to0}\frac{f(x+h)g(x+h) - f(x+h)g(x) + f(x+h)g(x) - f(x)g(x)}{h} \\
+=& \lim_{h\to0}\frac{f(x+h)g(x) - f(x)g(x)}{h} + \lim_{h\to0}\frac{f(x+h)g(x+h) - f(x+h)g(x)}{h} \\
+=& \lim_{h\to0}\bigg(\frac{f(x+h) - f(x)}{h}g(x)\bigg) + \lim_{h\to0}\bigg(f(x+h)\frac{g(x+h) - g(x)}{h}\bigg) \\
+=& \lim_{h\to0}\frac{f(x+h) - f(x)}{h}\lim_{h\to0}g(x) + \lim_{h\to0}f(x+h)\lim_{h\to0}\frac{g(x+h) - g(x)}{h} \\
+=& \bigg(\lim_{h\to0}\frac{f(x+h) - f(x)}{h}\bigg)g(x) + f(x)\bigg(\lim_{h\to0}\frac{g(x+h) - g(x)}{h}\bigg) \\
+\frac{d}{dx}\bigg[f(x)g(x) \bigg] =& \frac{df}{dx}g(x) + f(x)\frac{dg}{dx}
+\end{align*}
+
+\section{Derivative of a Polynomial}
+\[ \frac{d}{dx}\bigg[\sum\limits_{n=0}^N{a_n x^n} \bigg] = \sum\limits_{n=0}^N{a_n n x^{n-1}}\]
+
+\subsection{Derivation}
+\[\frac{df}{dx} = \lim_{h\to0}\frac{f(x+h) -f(x)}{h} \text{, the Formal Definition of the Derivative}\]
+\[f(x) = \sum\limits_{n=0}^N{a_n x^n}\]
+\begin{align*}
+\frac{df}{dx} =&  \lim_{h\to0}\frac{\sum\limits_{n=0}^N{a_n (x+h)^n} - \sum\limits_{n=0}^N{a_n x^n}}{h} \\
+=&  \lim_{h\to0}\frac{\sum\limits_{n=0}^N{a_n \sum\limits_{i=0}^n{{n \choose i}x^{n-i}h^i}} - \sum\limits_{n=0}^N{a_n x^n}}{h} \\
+=&  \lim_{h\to0}\frac{
+\sum\limits_{n=N}^0{a_n [{n\choose0}x^n + {n\choose1}x^{n-1}h+ {n\choose1}x^{n-2}h^2 + ... + {n\choose n}h^n]} - \sum\limits_{n=N}^0{a_n x^n}}
+{h} \\
+=&  \lim_{h\to0}\frac{\sum\limits_{n=N}^0{a_n x^n} + \sum\limits_{n=N}^0{{n\choose1} a_n x^{n-1}h} + \sum\limits_{n=N}^0{{n\choose1} a_n x^{n-2}h^2 + ... + \sum\limits_{n=N}^0{{n\choose n} a_n h^n}} - \sum\limits_{n=N}^0{a_n x^n}}{h} \\
+=&  \lim_{h\to0} \frac{ 
+\sum\limits_{n=N}^0{ {n\choose1} a_n x^{n-1}h   } + 
+\sum\limits_{n=N}^0{ {n\choose1} a_n x^{n-2}h^2 } + ... + 
+\sum\limits_{n=N}^0{ {n\choose n}a_n      h^n}  }{h} \\
+=& \sum\limits_{n=N}^0{ {n\choose1} a_n x^{n-1}  }\\
+\frac{df}{dx} =& \sum\limits_{n=N}^0{ a_n n x^{n-1}  }\\
+\end{align*}
+
+\section{Derivative of Sine}
+\section{Derivative of Cosine}
+
+\section{Derivative of $e^x$}
+\[ \frac{d}{dx}\bigg[e^x \bigg] = e^2 \]
+
+\subsection{Derivation}
+\[\frac{df}{dx} = \lim_{h\to0}\frac{f(x+h) -f(x)}{h}  \text{, the Formal Definition of the Derivative} \]
+\[ f(x) = e^x \]
+\begin{align*}
+\frac{df}{dx} =& \lim_{h\to0}\frac{e^{(x+h)} - e^x}{h} \\
+=& \lim_{h\to0} e^x\frac{(e^h - 1)}{h} \\
+=& e^x \lim_{h\to0} \frac{(e^h - 1)}{h}
+\end{align*}
+Let \( u = e^h -1 \) , so \(\ln{(u+1)} = h \) \\
+and when \( h\to 0 \) , also  \(u \to 0\)
+\begin{align*}
+\frac{df}{dx} =& e^x \lim_{h\to0} \frac{u}{\ln{(u+1)}} \\
+=& e^x \lim_{h\to0} \frac{1}{\frac{1}{u}\ln{(u+1)}} \\
+=& e^x \lim_{h\to0} \frac{1}{\ln{\left((u+1)^{\frac{1}{u}}\right)}} \\
+=& e^x  \frac{1}{\ln{\left(\lim_{h\to0}(u+1)^{\frac{1}{u}}\right)}} \\
+\end{align*}
+Recall the definition of \(e\)
+\[\lim_{n\to0}(n+1)^{\frac{1}{n}}\]\\
+So
+\begin{align*}
+\frac{df}{dx} =& e^x  \frac{1}{\ln{\left(\lim_{h\to0}(u+1)^{\frac{1}{u}}\right)}} \\
+ =& e^x  \frac{1}{\ln{(e)}} \\
+ \frac{df}{dx} =& e^x
+\end{align*}
+
+\section{Derivative of $\ln(x)$}
+\[ \frac{d}{dx}\bigg[\ln(x) \bigg] = \frac{1}{x} \]
+
+\subsection{Derivation}
+\[\frac{df}{dx} = \lim_{h\to0}\frac{f(x+h) -f(x)}{h}  \text{, the Formal Definition of the Derivative} \]
+\[ f(x) = \ln{(x)} \]
+\begin{align*}
+\frac{df}{dx} =& \lim_{h\to0}\frac{\ln{(x+h)} - \ln(x)}{h} \\
+=& \lim_{h\to0}\frac{ \ln{\left(\frac{x+h}{x}\right)} }{h} \\
+=& \lim_{h\to0}\frac{1}{h} \ln{\left(1+ \frac{h}{x}\right)} \\
+\end{align*}
+Let \(u = \frac{h}{x}\), \\
+And \(h = ux \) \\
+\begin{align*}
+\frac{df}{dx} =& \lim_{h\to0} \ln{\left(1+ u\right)^\frac{1}{ux}} \\
+=& \lim_{h\to0} \frac{1}{x}\ln{\left((1+ u)^\frac{1}{u}\right)} \\
+=&  \frac{1}{x}\lim_{h\to0}\ln{\left((1+ u)^\frac{1}{u}\right)} \\
+=&  \frac{1}{x}\ln{\left(\lim_{h\to0}(1+ u)^\frac{1}{u}\right)} \\
+\end{align*}
+Recall the definition of \(e\)
+\[\lim_{n\to0}(n+1)^{\frac{1}{n}}\]\\
+So
+\begin{align*}
+\frac{df}{dx} =& \frac{1}{x}\ln{\left(\lim_{h\to0}(1+ u)^\frac{1}{u}\right)} \\
+=& \frac{1}{x}\ln{(e)} \\
+\frac{df}{dx} =& \frac{1}{x}
+\end{align*}
+
+\section{Derivative of $x^x$}
+\[ \frac{d}{dx}\bigg[x^x \bigg] = x^x(\ln{(x)} + 1) \]
+
+\subsection{Derivation}
+Instead of deriving this from the Formal Definition of the Limit, we will use the previous derivatives as axioms with which to derive this one.
+\begin{align*}
+f(x)  =& x^x \\
+\ln{(f(x))} =& \ln{(x^x)} \\
+\ln{(f(x))} =& x\ln{(x)} \\
+\frac{d}{dx}\bigg[\ln{(f(x))}\bigg] =& \frac{d}{dx} \bigg[ x\ln{(x)} \bigg] = \frac{d}{dx}\bigg[ x \bigg]\ln{(x)} + x\frac{d}{dx}\bigg[\ln{(x)} \bigg]\\
+\frac{1}{f(x)}\frac{df}{dx} =&  \ln{(x)} + x\frac{1}{x} \\
+\frac{df}{dx} =&  x^x(\ln{(x)} + 1)
+\end{align*}

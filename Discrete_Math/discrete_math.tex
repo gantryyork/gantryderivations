@@ -1,0 +1,28 @@
+\section{Amitorization Formula}
+The formula to calculate equal payments \(p\) to reduce an initial debt \(d\) in \(N\) payments with interest rate \(r\) is\\
+
+\[p = d\frac{r(1+r)^N}{(1+r)^N -1}\]
+
+\subsection{Derivation}
+\(y(n)\) is the balance on the loan at compound iteration \(n\), where \(n \in \mathbb{I} \)\\
+\(y(0) = d\) \\
+Each compounding period, a payment of \(p\) will be made.\\
+Each compounding period, an interest rate of \(r\) will be applied to the balance.
+\(N\) will be the total number of payments.\\
+
+\begin{align*}
+y(0) &= d \\
+y(1) &= y(0) + y(0)r - p = (1+r)y(0) -p\\
+y(2) &= (1+r)y(1) -p = (1+r)((1+r)d -p) -p \\
+y(3) &= (1+r)y(2) -p = (1+r)((1+r)((1+r)d -p) -p) -p \\
+y(n) &= d(1+r)^n -p(1+r)^{n-1} -p(1+r)^{n-2} -p(1+r)^{n-3} - ...\\
+\\
+y(n) &= d(1+r)^n -p\sum\limits_{i=0}^{n-1}{{(1+r)}^i}
+\end{align*}
+This formula tells us the balance at any given compounding period.  What would the payment, \(p\), have to be in order for balance to be 0 when \(n=N\)?\\
+\begin{align*}
+y(N) &= d(1+r)^N -p\sum\limits_{i=0}^{N-1}{{(1+r)}^i} \\
+0 &= d(1+r)^N -p\left( \frac{1-(1+r)^N}{1-(1+r)} \right) \\
+p\left( \frac{(1+r)^N -1}{r} \right) &= d(1+r)^N \\
+p &= d\frac{r(1+r)^N}{(1+r)^N -1}
+\end{align*}

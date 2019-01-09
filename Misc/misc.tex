@@ -1,0 +1,15 @@
+\section{Euler's Formula}
+Euler's formula is most commonly written as 
+\[e^{i\theta} = \cos{\theta} + i\sin{\theta}\]
+
+\subsection{Derivation}
+Do a Taylor Series expansion on \(e^{i\theta}\)
+\begin{align*}
+f(x) &= \sum_{n=0}^{\infty}{\left.\dfrac{d^{(n)}}{dx}\bigg[f(x)\bigg]\right|_{x=x_0}\frac{(x-x_0)^n}{n!}} \\
+e^{i\theta} &= \sum_{n=0}^{\infty}{\left.\dfrac{d^{(n)}}{d\theta}\bigg[f(\theta)\bigg]\right|_{\theta=0}\frac{(\theta)^n}{n!}} \\
+e^{i\theta} &= e^{i0}\frac{\theta^0}{0!} + e^{i0}i\frac{\theta^1}{1!} +e^{i0}i^2\frac{\theta^2}{2!}+e^{i0}i^3\frac{\theta^3}{3!}+e^{i0}i^4\frac{\theta^4}{4!}+e^{i0}i^5\frac{\theta^5}{5!}+e^{i0}i^6\frac{\theta^6}{6!}... \\
+e^{i\theta} &= 1 + i\frac{\theta}{1!} - \frac{\theta^2}{2!}-i\frac{\theta^3}{3!}+\frac{\theta^4}{4!}+i\frac{\theta^5}{5!}-\frac{\theta^6}{6!}+... \\
+e^{i\theta} &= 1 - \frac{\theta^2}{2!}+\frac{\theta^4}{4!}-\frac{\theta^6}{6!} + ... + i\frac{\theta}{1!}-i\frac{\theta^3}{3!}+i\frac{\theta^5}{5!} + ... \\
+e^{i\theta} &= \underbrace{\bigg(1 - \frac{\theta^2}{2!}+\frac{\theta^4}{4!}-\frac{\theta^6}{6!} + ...\bigg)}_{cos\theta} + i\underbrace{\bigg(\frac{\theta}{1!}-\frac{\theta^3}{3!}+\frac{\theta^5}{5!} + ...\bigg)}_{sin\theta} \\
+e^{i\theta} &= \cos{\theta} + i\sin{\theta}
+\end{align*}

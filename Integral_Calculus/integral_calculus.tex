@@ -1,0 +1,18 @@
+\section{Integration by Parts}
+Integration by parts is most commonly stated as
+\[\int{udv} = uv - \int{vdu}\]
+Where both the functions u and v are implied to be functions of another variable, u(x) and v(x)
+
+\subsection{Derivation}
+Integration by parts can be derived starting with the Product Rule
+\begin{align*}
+d\left[ u(x)v(x) \right] &= \frac{du}{dx}v(x) + u(x)\frac{dv}{dx} \\
+\int{d\left[ u(x)v(x) \right]dx} &= \int{\left(\frac{du}{dx}v(x) + u(x)\frac{dv}{dx}\right)dx} \\
+u(x)v(x) &= \int{\frac{du}{dx}v(x)dx} + \int{u(x)\frac{dv}{dx}dx} \\
+u(x)v(x) - \int{\frac{du}{dx}v(x)dx} &=  \int{u(x)\frac{dv}{dx}dx} \\
+\int{u(x)dv} &= u(x)v(x) - \int{v(x)du} \\
+\end{align*}
+Or more informally written as
+\begin{align*}
+\int{udv} &= uv - \int{vdu} 
+\end{align*}

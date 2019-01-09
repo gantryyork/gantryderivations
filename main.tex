@@ -1,0 +1,109 @@
+\documentclass[11pt]{book}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\graphicspath{{.} {/home/gantry/dev/gantryderivations} }
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+
+
+\title{\textbf{Gantry's\\Mathematical Proofs,\\Derivations, Conjectures\\and Explanations}}
+\author{Gantry York}
+\date{December 21, 2014}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents 
+
+
+\chapter*{Overview}
+
+\section*{Why This Book}
+I was not a great math student in high school.  My grades were good, but I was learning how to apply formulas and execute methods.\\
+\\
+It wasn't until I took calculus at the university that I actually understood where the formulas came from.\\
+\\
+This was my epiphany.  This is when these symbols and operations started to mean something to me.  I would say it was analagous from going from grammar to literature.  This is when the mathematics started to tell me a story\\
+\\
+For many students, deriving a formula is not imporant to them since the homework sets are about apply the formula.  But if you want to truly understand a formula, it's boundary conditions, when it does and does not apply, extrapolate it beyond it's context, you must have an appreciation for the derivation.\\
+\\
+
+
+\section*{Terminology}
+Many consider a proof and a derivation as essentially the same thing.\\
+\\
+A proof is when you state: If p, then q\\
+\\
+Here p is a fundamental statement(s) that are assumed to be true.  If you accept it to be true, it is called an \emph{axiom}.\\
+\\
+p is refered to as the \emph{hypothesis} or \emph{proposition}, and q is refered to as the \emph{conclusion}.\\
+\\
+To prove q true, one must start with p and provide a convincing argument that leads to q.\\
+\\
+If this is done in intermediate parts, these parts are called \emph{lemmas}.\\
+\\
+So after stating if p, then q, one makes derivative statements of p with the intended purpose of leading to q.  This is the \emph{derivation}.\\
+\\
+Derivations are also used less formally outside the context of a formal proof.\\
+\\
+A \emph{conjecture} is an unproven proposition that one can make a compelling but incomplete argument that it is true.  This could be a visual proof; proving it to be true for most cases; an extrapolation of logic; a demonstration of pattern; or other such reasoning.\\
+\\
+
+ 
+\chapter{Geometry}
+
+\input{Geometry/geometry.tex}
+
+\chapter{Trigonometry}
+
+\input{Trigonometry/trigonometry.tex}
+
+\chapter{Algebra}
+
+\input{Algebra/algebra.tex}
+
+\chapter{Linear Algebra}
+
+\input{Linear_Algebra/linear_algebra.tex}
+
+\chapter{Summations}
+
+\input{Summations/summations.tex}
+
+\chapter{Combinatorics}
+
+\input{Combinatorics/combinatorics.tex}
+
+\chapter{Differential Calculus}
+
+\input{Differential_Calculus/differential_calculus.tex}
+
+\chapter{Integral Calculus}
+
+\input{Integral_Calculus/integral_calculus.tex}
+
+\chapter{Vector Calculus}
+
+\input{Vector_Calculus/vector_calculus.tex}
+
+\chapter{Statistics}
+
+\chapter{Probability}
+
+\input{Probability/probability.tex}
+
+\chapter{Discrete Mathematics}
+
+\input{Discrete_Math/discrete_math.tex}
+
+\chapter{Other Stuff}
+
+\input{Misc/misc.tex}
+
+\chapter*{Acknowledgements}
+
+\section*{Credits}
+
+\end{document}
